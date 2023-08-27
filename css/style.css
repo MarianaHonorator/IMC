@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+body{
+    background-color:#556;
+background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+background-size:80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+:root{
+    --font-document: 'Fjalla One', sans-serif;
+}
+
+
+h1{
+    margin-left: 170px;
+   
+    
+}
+
+section{
+    margin-left: 400px;
+    background-color: whitesmoke;
+    height: 550px;
+    width: 550px;
+    border-radius: 1%;
+    box-shadow: 5px 10px 60px 0px grey;
+    
+/}
+
+input{
+    display: flex;
+    margin-bottom: 4%;
+    justify-content: center;
+    width: 35ch;
+   
+}
+form{
+    margin-left: 25%;
+    margin-top: 20%;
+
+    
+}
+h1{
+    font-size: 55px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 149px;
+    font-family: var(--font-document);
+
+}
+
+label{
+    font-family: var(--font-document);
+}
+#titulo{
+    background-color: darkgrey;
+    border-radius: 1%;
+    
+}
+#resultado{
+   margin-top: 10%;
+    font-family: var(--font-document);
+    color: black;
+   background-color: aqua;
+   width: fit-content;
+}
