@@ -36,11 +36,6 @@ form.addEventListener('submit', (e) => {
   
 });
 
-function criarTag () {
-    
-    const strong = document.createElement('strong');
-    return strong;
-}
 
 function calculoIMC(dados) {
   const imc = dados.peso / (dados.altura ** 2);
@@ -50,6 +45,7 @@ function calculoIMC(dados) {
 }
 
 function indiceIMC(imcFormat) {
+    
     const nivel = ['Abaixo do peso', 'Peso normal','Sobrepeso','Obesidade grau 1','Obesidade grau 2','Obesidade grau 3'];
 
     if (imcFormat < 18.5) return nivel[0];
