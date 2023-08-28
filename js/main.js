@@ -35,32 +35,39 @@ form.addEventListener('submit', (e) => {
 
 function calculoIMC(dados) {
   const resultado = document.querySelector('#resultado');
+  const p = document.createElement('p');
   const imc = dados.peso / (dados.altura ** 2);
   const imcFormat = imc.toFixed(2);
   console.log(imc);
   if (imcFormat < 18.5) {
-    resultado.innerHTML = `<p><strong>seu IMC é ${imcFormat} - Abaixo do peso! </strong></p>`;
+    p.innerHTML = `<strong>seu IMC é ${imcFormat} - Abaixo do peso! </strong>`;
+    resultado.appendChild(p);
   }else{
     if(imcFormat > 18.5 && imcFormat < 24.9){
 
-        resultado.innerHTML = `<p><strong>seu IMC é ${imcFormat} - peso normal!</strong></p>`;
+        p.innerHTML = `<strong>seu IMC é ${imcFormat} - peso normal!</strong>`;
+        resultado.appendChild(p);
 
     }else{
         if(imcFormat > 25 && imcFormat < 29.9){
-            resultado.innerHTML = `<p><strong>seu IMC é ${imcFormat} - sobrepeso!</strong></p>`;
-            resultado.style.background = 'red';
+            p.innerHTML = `<strong>seu IMC é ${imcFormat} - sobrepeso!</strong>`;
+            p.style.background = 'red';
+            resultado.appendChild(p);
         }else{
             if(imcFormat > 30 && imcFormat < 34.9){
-                resultado.innerHTML = `<p><strong>seu IMC é ${imcFormat} - obesidade grau 1!</strong></p>`;
-                resultado.style.background = 'red';
+                p.innerHTML = `<strong>seu IMC é ${imcFormat} - obesidade grau 1!</strong>`;
+                p.style.background = 'red';
+                resultado.appendChild(p);
             }else{
                 if(imcFormat > 35 && imcFormat < 39.9){
-                    resultado.innerHTML = `<p><strong> seu IMC é ${imcFormat} obesidade grau 2!</strong></p>`;
-                    resultado.style.background = 'red';
+                    p.innerHTML = `<strong> seu IMC é ${imcFormat} obesidade grau 2!</strong>`;
+                    p.style.background = 'red';
+                    resultado.appendChild(p);
 
                 }else{
-                    resultado.innerHTML = `<p><strong> seu IMC é ${imcFormat} obesidade grau !</strong></p>`;
-                    resultado.style.background = 'red';
+                    p.innerHTML = `<strong> seu IMC é ${imcFormat} obesidade grau !</strong>`;
+                    p.style.background = 'red';
+                    resultado.appendChild(p);
                 }
             }
         }
