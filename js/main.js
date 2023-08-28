@@ -38,23 +38,30 @@ form.addEventListener('submit', (e) => {
 
 
 function calculoIMC(dados) {
-  const imc = dados.peso / (dados.altura ** 2);
-  const imcFormat = imc.toFixed(2);
-  return imcFormat;
-  
+    
+    const imc = dados.peso / (dados.altura ** 2);
+    const imcFormat = imc.toFixed(2);
+    return imcFormat;
+    
 }
 
 function indiceIMC(imcFormat) {
     
     const nivel = ['Abaixo do peso', 'Peso normal','Sobrepeso','Obesidade grau 1','Obesidade grau 2','Obesidade grau 3'];
-
+    
     if (imcFormat < 18.5) return nivel[0];
     if(imcFormat > 18.5 && imcFormat < 24.9) return nivel[1];
     if(imcFormat > 25 && imcFormat < 29.9) return nivel[2];
     if(imcFormat > 30 && imcFormat < 34.9) return nivel[3];
     if(imcFormat > 35 && imcFormat < 39.9) return nivel[4];
     else return nivel[5];
+    
+}
 
+function criarTag () {
+    
+    const strong = document.createElement('strong');
+    return strong;
 }
 
 function setResultado(msg) {
