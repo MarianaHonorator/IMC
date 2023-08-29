@@ -10,13 +10,23 @@ form.addEventListener('submit', (e) => {
     altura: altura.value,
   };
 
-  if(peso.value == 0 || altura.value == 0){
+  validacaoDados(dados);
+
+ 
+  
+});
+
+function validacaoDados(dados) {
+
+    const resultado = document.querySelector('#resultado');
+
+     if(dados.peso == 0 || dados.altura == 0){
       
       alert('Campo em branco!')
       resultado.innerHTML = '';
       
     }else{
-        if(isNaN(peso.value)|| isNaN(altura.value)){
+        if(isNaN(dados.peso)|| isNaN(dados.altura)){
             
             alert('valor invalido!')
             resultado.innerHTML = '';
@@ -33,9 +43,7 @@ form.addEventListener('submit', (e) => {
         
     }
     
-  
-});
-
+}
 
 function calculoIMC(dados) {
     
