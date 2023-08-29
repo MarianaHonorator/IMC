@@ -63,9 +63,22 @@ label{
     
 }
 #resultado{
-   margin-top: 10%;
+    margin-top: 10%;
     font-family: var(--font-document);
-    color: black;
-   background-color: grey;
+   background-color: #99a; 
    width: fit-content;
+}
+button{
+    width: 65%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+    border-style:none;
+    background-color:darkgray;
+
+    
+}
+
+button:hover{
+    background-color: gray;
 }
